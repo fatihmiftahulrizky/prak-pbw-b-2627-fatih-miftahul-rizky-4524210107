@@ -8,7 +8,7 @@ class Mahasiswa implements Identitas {
     private string $nama;
     private float $ipk;
 
-    public function __construct(string $nim, string $nama, string $prodi, int $semester, float $ipk) {
+    public function __construct(string $nim, string $nama, float $ipk) {
         $this->nim = $nim;
         $this->nama = $nama;
         $this->setIpk($ipk);
