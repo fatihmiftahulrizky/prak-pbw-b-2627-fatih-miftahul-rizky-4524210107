@@ -38,6 +38,7 @@ $sqlCreateTables = [
     "CREATE TABLE IF NOT EXISTS mata_kuliah (
         id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         kode_mk VARCHAR(12) NOT NULL UNIQUE,
+        sks TINYNT UNSIGNED NOT NULL UNIQUE,
         nama_mk VARCHAR(100) NOT NULL,
         dosen_id BIGINT UNSIGNED,
         CONSTRAINT fk_mk_dosen
