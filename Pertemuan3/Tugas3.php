@@ -49,7 +49,8 @@ $sqlCreateTables = [
         id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         kode_mk VARCHAR(12) NOT NULL UNIQUE,
         nama_mk VARCHAR(100) NOT NULL,
-        sks TINYINT UNSIGNED NOT NULL CHECK (sks BETWEEN 1 AND 6),
+        sks TINYINT UNSIGNED,
+        kategori VARCHAR(30) NOT NULL,
         dosen_id BIGINT UNSIGNED,
 
         CONSTRAINT fk_mk_dosen
