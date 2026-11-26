@@ -1,69 +1,57 @@
-# CodeIgniter 4 Application Starter
+<h1>Penjelasan Singkat Tugas P8 Pengenalan CI4</h1><br>
 
-## What is CodeIgniter?
+<b>Deskripsi</b><br>
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Project ini merupakan implementasi modul mahasiswa sederhana menggunakan framework CodeIgniter 4 (CI4). Modul ini dibuat untuk mengelola data mahasiswa dengan menerapkan konsep CRUD (Create, Read, Update, Delete) serta validasi input menggunakan fitur Validation Rules dari CodeIgniter 4.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+<b>Fitur Aplikasi</b>
+1. Create (Tambah Data)<br>
+Fitur untuk menambahkan data mahasiswa baru ke dalam database.<br>
+Data yang dimasukkan meliputi:<br>
+-NIM<br>
+-Nama<br>
+-Email<br>
+-Program Studi<br>
+-IPK<br>
+<img width="575" height="433" alt="image" src="https://github.com/user-attachments/assets/a2bf5ced-46fc-4b9d-9a25-84130f1223a0" />
+<img width="571" height="372" alt="image" src="https://github.com/user-attachments/assets/c22f367a-4955-48fa-9216-f43ca8a3ef0c" /><br>
+<br>
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+2. Read (Menampilkan Data)<br>
+Fitur untuk menampilkan seluruh data mahasiswa yang tersimpan di database dalam bentuk tabel.<br>
+Informasi yang ditampilkan:<br>
+-NIM<br>
+-Nama<br>
+-Program Studi<br>
+-IPK<br>
+<img width="558" height="322" alt="image" src="https://github.com/user-attachments/assets/e755e104-3795-49a9-a349-42c081b14307" /><br>
+<br>
+Pada halaman ini juga tersedia tombol Edit dan Hapus untuk mengelola data mahasiswa.<br>
+<br>
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+3. Update (Ubah Data)<br>
+Fitur untuk mengubah data mahasiswa yang sudah tersimpan di database. Pengguna dapat memilih data mahasiswa melalui tombol Edit, kemudian memperbarui informasi melalui form yang tersedia.
+<img width="575" height="332" alt="image" src="https://github.com/user-attachments/assets/2467b7cc-be6b-4fc5-ad6e-2c99168206de" />
+<img width="485" height="425" alt="image" src="https://github.com/user-attachments/assets/e4dec3d9-e8f2-479c-8268-4caf67d52ab0" />
+<img width="557" height="372" alt="image" src="https://github.com/user-attachments/assets/bc7e5987-0660-4997-9c19-d1ddd6e7886c" /><br>
+<br>
 
-## Installation & updates
+4. Delete (Hapus Data)<br>
+Fitur untuk menghapus data mahasiswa berdasarkan ID. Sebelum data dihapus, aplikasi menampilkan konfirmasi agar pengguna dapat memastikan tindakan penghapusan.
+<img width="1275" height="340" alt="image" src="https://github.com/user-attachments/assets/ed55f87e-30c9-4bda-adfb-d9de7ab90516" />
+<img width="588" height="351" alt="image" src="https://github.com/user-attachments/assets/39297efe-c82a-43e4-b3eb-8e6011aa8c7d" /><br>
+<br>
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+<b>Validasi Input</b><br>
+Aplikasi menggunakan Validation Rules bawaan CodeIgniter 4 untuk memeriksa data sebelum disimpan atau diperbarui.
+<img width="621" height="510" alt="image" src="https://github.com/user-attachments/assets/67411a8e-6bac-459d-9120-1bc1d6753a6b" /><br>
+<br>
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+<b>Validasi yang diterapkan pada fitur tambah dan ubah:</b><br>
 
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+NIM: Wajib diisi dan tidak boleh duplikat saat menambah data.<br>
+Nama: Wajib diisi.<br>
+Email: Wajib diisi dan harus menggunakan format email yang valid.<br>
+Email (tambah): Tidak boleh duplikat.<br>
+Program Studi: Wajib diisi.<br>
+IPK: Wajib diisi, harus berupa angka, minimal 0 dan maksimal 4.<br>
